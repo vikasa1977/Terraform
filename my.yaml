@@ -1,0 +1,39 @@
+# Azure DevOps YAML pipeline for Terraform AKS deployment
+
+# Use the latest version of the pipeline runtime
+pool:
+  vmImage: 'ubuntu-latest'
+
+# Define the steps in the pipeline
+steps:
+
+# Install Terraform
+- task: TerraformInstaller@0
+  inputs:
+    terraformVersion: '0.14.x'
+
+# Initialize Terraform
+- task: TerraformTaskV1@0
+  inputs:
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-aks'
+
+# Plan the Terraform deployment
+- task: TerraformTaskV1@0
+  inputs:
+    command: 'plan'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-aks'
+
+# Apply the Terraform deployment
+- task: TerraformTaskV1@0
+  inputs:
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-aks'
+    autoApprove: true
+
+# Destroy the Terraform deployment
+- task: TerraformTaskV1@0
+  inputs:
+    command: 'destroy'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-aks'
+    autoApprove: true
