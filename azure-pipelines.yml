@@ -23,24 +23,24 @@ steps:
 - task: TerraformTaskV1@0
   inputs:
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-aks'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
 
 # Plan the Terraform deployment
 - task: TerraformTaskV1@0
   inputs:
     command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-aks'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
 
 # Apply the Terraform deployment
 - task: TerraformTaskV1@0
   inputs:
     command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-aks'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     autoApprove: true
 
 # Destroy the Terraform deployment
 - task: TerraformTaskV1@0
   inputs:
     command: 'destroy'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-aks'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     autoApprove: true
