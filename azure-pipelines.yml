@@ -15,6 +15,9 @@ steps:
   inputs:
     azureSubscription: 'MyConnectionwithAZ' #replace with your
     scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: | 
+      az account set --subscription 56edc819-264e-4a3c-be6f-1496e0b07eeb
 
 # Initialize Terraform
 - task: TerraformTaskV1@0
