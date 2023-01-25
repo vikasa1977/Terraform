@@ -13,7 +13,7 @@ steps:
     terraformVersion: '0.14.4'
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'MyConnectionwithAZ' #replace with your
+    azureSubscription: 'newconn' #replace with your
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: | 
