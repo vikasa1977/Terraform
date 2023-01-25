@@ -12,6 +12,11 @@ steps:
   inputs:
     terraformVersion: '0.14.4'
 
+steps:
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: '<service-connection-auth>' #replace with your 
+
 # Initialize Terraform
 - task: TerraformTaskV1@0
   inputs:
