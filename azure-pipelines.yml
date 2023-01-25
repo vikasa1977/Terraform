@@ -15,7 +15,7 @@ steps:
 steps:
   - task: AzureCLI@2
     inputs:
-      azureSubscription: '<service-connection-auth>' #replace with your 
+      azureSubscription: 'MyConnectionwithAZ' #replace with your 
 
 # Initialize Terraform
 - task: TerraformTaskV1@0
