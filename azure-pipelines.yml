@@ -10,7 +10,7 @@ steps:
 # Install Terraform
 - task: TerraformInstaller@0
   inputs:
-    terraformVersion: '0.14.x'
+    terraformVersion: '0.14.4'
 
 # Initialize Terraform
 - task: TerraformTaskV1@0
