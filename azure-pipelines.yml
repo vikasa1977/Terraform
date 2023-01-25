@@ -14,7 +14,7 @@ steps:
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'newconn' #replace with your
-    scriptType: 'PowerShell'
+    scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: | 
      az account set --subscription "1b70a211-4952-4890-b6e3-7426a9962e92"
