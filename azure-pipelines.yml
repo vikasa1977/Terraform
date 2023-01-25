@@ -11,9 +11,7 @@ steps:
 - task: TerraformInstaller@0
   inputs:
     terraformVersion: '0.14.4'
-
-steps:
-  - task: AzureCLI@2
+- task: AzureCLI@2
     inputs:
       azureSubscription: 'MyConnectionwithAZ' #replace with your 
 
