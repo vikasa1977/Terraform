@@ -17,7 +17,7 @@ steps:
     scriptType: 'PowerShell'
     scriptLocation: 'inlineScript'
     inlineScript: | 
-      az account set --subscription 56edc819-264e-4a3c-be6f-1496e0b07eeb
+      az account set --subscription 1b70a211-4952-4890-b6e3-7426a9962e92
 
 # Initialize Terraform
 - task: TerraformTaskV1@0
