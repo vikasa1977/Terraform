@@ -46,11 +46,12 @@ steps:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
     autoApprove: true
-    environmentServiceName: 'newconn'
+    environmentServiceNameAzureRM: 'newconn'
 
 # Destroy the Terraform deployment
 - task: TerraformTaskV1@0
   inputs:
     command: 'destroy'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
+    environmentServiceNameAzureRM: 'newconn'
     autoApprove: true
