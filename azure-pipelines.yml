@@ -25,6 +25,8 @@ steps:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
+    backendType: 'azurerm'
+    backendServiceArm: 'terraform-aks-azurerm-svc-con'
 
 # Plan the Terraform deployment
 - task: TerraformTaskV1@0
