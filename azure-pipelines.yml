@@ -37,6 +37,7 @@ steps:
   inputs:
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
+    environmentServiceNameAzureRM: 'newconn'
 
 # Apply the Terraform deployment
 - task: TerraformTaskV1@0
