@@ -46,6 +46,7 @@ steps:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
     autoApprove: true
+    environmentServiceName: 'newconn'
 
 # Destroy the Terraform deployment
 - task: TerraformTaskV1@0
