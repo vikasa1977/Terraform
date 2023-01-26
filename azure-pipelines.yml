@@ -27,6 +27,8 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)'
     backendType: 'azurerm'
     backendServiceArm: 'newconn'
+    backendAzureRmStorageAccountName: 'terraformstatexlrwdrzs'
+    backendAzureRmContainerName: 'tfstatefiles'
 
 # Plan the Terraform deployment
 - task: TerraformTaskV1@0
