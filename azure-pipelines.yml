@@ -29,6 +29,7 @@ steps:
     backendServiceArm: 'newconn'
     backendAzureRmStorageAccountName: 'terraformstatexlrwdrzs'
     backendAzureRmContainerName: 'tfstatefiles'
+    backendAzureRmKey: 'aks-base.tfstate'
 
 # Plan the Terraform deployment
 - task: TerraformTaskV1@0
