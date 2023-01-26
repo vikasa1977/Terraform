@@ -30,6 +30,7 @@ steps:
     backendAzureRmStorageAccountName: 'terraformstatexlrwdrzs'
     backendAzureRmContainerName: 'tfstatefiles'
     backendAzureRmKey: 'aks-base.tfstate'
+    backendAzureRmResourceGroupName: 'terraform-storage-rg'
 
 # Plan the Terraform deployment
 - task: TerraformTaskV1@0
