@@ -38,6 +38,7 @@ steps:
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
     environmentServiceNameAzureRM: 'newconn'
+    skip_provider_registration: 'true'
 
 # Apply the Terraform deployment
 - task: TerraformTaskV1@0
