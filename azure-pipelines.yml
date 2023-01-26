@@ -17,7 +17,7 @@ steps:
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: | 
-     az account set --subscription "1b70a211-4952-4890-b6e3-7426a9962e92"
+     az account set --subscription "1b2969cb-56c9-4ffb-8a3c-82adc7c5ad0c"
 
 # Initialize Terraform
 - task: TerraformTaskV1@0
