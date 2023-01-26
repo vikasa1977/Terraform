@@ -8,7 +8,7 @@ pool:
 steps:
 
 # Install Terraform
-- task: TerraformInstaller@0
+- task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
   inputs:
     terraformVersion: '0.14.4'
 - task: AzureCLI@2
