@@ -13,7 +13,7 @@ steps:
     terraformVersion: '0.14.4'
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'newconn' #replace with your
+    azureSubscription: 'Vikas-Awate (1b2969cb-56c9-4ffb-8a3c-82adc7c5ad0c)' #replace with your
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: | 
@@ -26,7 +26,7 @@ steps:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
     backendType: 'azurerm'
-    backendServiceArm: 'newconn'
+    backendServiceArm: 'Vikas-Awate (1b2969cb-56c9-4ffb-8a3c-82adc7c5ad0c)'
     backendAzureRmStorageAccountName: 'terraformstatexlrwdrzs'
     backendAzureRmContainerName: 'tfstatefiles'
     backendAzureRmKey: 'aks-base.tfstate'
@@ -37,7 +37,7 @@ steps:
   inputs:
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
-    environmentServiceNameAzureRM: 'newconn'
+    environmentServiceNameAzureRM: 'Vikas-Awate (1b2969cb-56c9-4ffb-8a3c-82adc7c5ad0c)'
     #skip_provider_registration: 'true'
 
 # Apply the Terraform deployment
@@ -46,12 +46,12 @@ steps:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
     autoApprove: true
-    environmentServiceNameAzureRM: 'newconn'
+    environmentServiceNameAzureRM: 'Vikas-Awate (1b2969cb-56c9-4ffb-8a3c-82adc7c5ad0c)'
 
 # Destroy the Terraform deployment
 - task: TerraformTaskV1@0
   inputs:
     command: 'destroy'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
-    environmentServiceNameAzureRM: 'newconn'
+    environmentServiceNameAzureRM: 'Vikas-Awate (1b2969cb-56c9-4ffb-8a3c-82adc7c5ad0c)'
     autoApprove: true
